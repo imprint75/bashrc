@@ -14,6 +14,9 @@ parse_git_branch() {
 }
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# ssh keep alive
+alias sshalive='ssh -o ServerAliveInterval=30'
+
 # git aliases
 alias ga='git add'
 alias gp='git push'
@@ -29,5 +32,5 @@ alias gra='git remote add'
 alias grr='git remote rm'
 alias gpl='git pull'
 alias gcl='git clone'
-alias gplom='git pull origin master'
-alias gpom='git push origin master'
+alias gplo='git pull origin'
+alias gpo='git push origin'
